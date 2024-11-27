@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+@font-face {
+  font-family:poppin ;
+  src: url(./assets/Inter\,Poppins\,Raleway.zip);
+}
+.shadow{
+  box-shadow: 0 0 0 .25rem rgba(13,110,253,.25);
+}
+.shadow2{
+  box-shadow: 0 0 0 .25rem rgba(16, 31, 53, 0.705);
+}
+.hoverline{
+  position: relative;
+}
+
+
+
+
+
+.link:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: .05em;
+  background: currentColor;
+  will-change: transform;
+  transform-origin: 100% 100%;
+  transform: scaleX(0);
+  pointer-events: none;
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(.215,.61,.355,1);
+  transition-duration: .5s;
+}
+
+.link:hover:after{
+  transform: scaleX(1);
+}
+
+.link{
+  position: relative;
+    cursor: pointer;
+}
+.btn{
+  transition-timing-function: cubic-bezier(.215,.61,.355,1);
+    transition-duration: .7s;
+}
+.btn:hover{
+  background-color: black;
+  color: white;
+
+}
+
+.scale {
+  transition-property: transform;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: .5s;
+}
+.scale:hover{
+  transform: scale(1.1);
+}
